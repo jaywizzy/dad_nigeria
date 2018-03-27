@@ -150,7 +150,7 @@ return [
         /*
          * Package Service Providers...
          */
-        Catalyst\Sentinel\Laravel\SentinelServiceProvider::class,
+        Cartalyst\Sentinel\Laravel\SentinelServiceProvider::class,
 
         /*
          * Application Service Providers...
