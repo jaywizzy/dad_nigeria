@@ -11,8 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('login', 'UserController@loginpage');
-Route::get('auth-login', 'UserController@postlogin');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// Route::get('/user', 'UserController@index');
+Route::get('register', 'UserController@create');
+Route::post('save', 'UserController@save')->name('store_user');
+
+Route::get('user/edit/{id}', 'UserController@edit')->name('edit');
+Route::put('user/update/{id}', 'UserController@update')->name('update');
+
+Route::get('resetpassword', 'UserController@passwordedit');
+Route::put('resetpasswordcomplete/{id}', 'UserController@update')->name('passwordreset');
+
+Route::get('/', 'UserController@loginpage');
+Route::post('auth-login', 'UserController@postlogin');

@@ -163,6 +163,7 @@ return [
         App\Providers\UserServiceProvider::class,
 
         Cartalyst\Sentinel\Laravel\SentinelServiceProvider::class,
+        Greggilbert\Recaptcha\RecaptchaServiceProvider::class,
         
 
     ],
@@ -217,6 +218,9 @@ return [
         'Activation' => Cartalyst\Sentinel\Laravel\Facades\Activation::class,
         'Reminder'   => Cartalyst\Sentinel\Laravel\Facades\Reminder::class,
         'Sentinel'   => Cartalyst\Sentinel\Laravel\Facades\Sentinel::class,
+
+        'Recaptcha' => Greggilbert\Recaptcha\Facades\Recaptcha::class,
+
 
     ],
 
