@@ -20,7 +20,7 @@
                 {!! Form::email('email', null, array('class' => 'form-control')) !!} <br>
             </div>
             <div class="form-group">
-                <label for="">Password</label>
+                <label for="">Password</label><br>
                 {!! Form::password('password', null, array('class' => 'form-control')) !!}
             </div>
             <br><br>

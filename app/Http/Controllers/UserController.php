@@ -95,12 +95,12 @@ class UserController extends Controller
 
             // $login = Sentinel::login($user);
             if (Sentinel::login($login)){
-                return ('yeah');
+                return redirect('edit');
             }else{
                 return ('oh nooo!');
             }
         } else {
-            return ('No record exists!');
+            return redirect('/')->back->with('error', 'incorrect login details');
         }
         // dd($user);
         
