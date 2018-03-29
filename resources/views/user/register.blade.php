@@ -37,8 +37,8 @@
 		<label for="title">Title:<br>
 			<select name="title">
 				<option value="ms">Ms</option>
-				<option value="ms">Mrs</option>
-				<option value="ms">Mr</option>
+				<option value="mrs">Mrs</option>
+				<option value="mr">Mr</option>
 			</select>
 		</label><br><br>
 
