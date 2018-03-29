@@ -4,6 +4,8 @@
 	<title>Registration form</title>
 	<!-- <script src='https://www.google.com/recaptcha/api.js'></script> -->
 	<link rel="stylesheet" href="{{ URL::asset('css/bootstrap.css') }}">
+	<!-- <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}"> -->
+	<!-- <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css"> -->
 </head>
 <body>
 
@@ -11,7 +13,6 @@
 
 
 <div class="container">
-	<div class="row">
 	
 		<form action="{{route('store_user')}}" method="POST">
 			@if($errors)
@@ -27,6 +28,7 @@
 
 				<!-- <label>USERNAME:</label><br>
 				<input type="text" name="username"><br><br> -->
+					
 
 				<div class="col-md-4 col-lg-4">
 					<div class="form-group">
@@ -41,27 +43,48 @@
 						<input type="text" name="last_name" class="form-control">
 					</div>
 				</div>
+
 				<div class="col-md-4 col-lg-4">
+					<div class="form-group">
 					<label for="title">Title:<br>
-					<select name="title">
+					<select name="title" class"form-control">
 						<option value="ms">Ms</option>
 						<option value="mrs">Mrs</option>
 						<option value="mr">Mr</option>
 					</select>
+					</div>
+					
 				</div>
-				</label><br><br>
 
-				<label>ORGANISATION:</label><br>
-				<input type="text" name="organisation"><br><br>
-
+				<div class="col-md-4">
+					<div class="form-group">
+					<label>ORGANISATION:</label><br>
+					<input type="text" name="organisation" class"form-control"><br><br>
+					</div>
+					
+				</div>
+				
+				<div class="col-md-4">
+					<div class="form-group">
 				<label>DEPARTMENT:</label><br>
-				<input type="text" name="department"><br><br>
+				<input type="text" name="department" class"form-control"><br><br>
+					</div>
+				</div>
 
+				<div class="col-md-4">
+					<div class="form-group">
 				<label>POSITION:</label><br>
 				<input type="text" name="position"><br><br>
+					</div>
+				</div>
 
+				<div class="col-md-4">
+					<div class="form-group">
 				<label>POSTAL ADDRESS:</label><br>
 				<input type="text" name="postal_address"><br><br>
+					</div>
+				</div>
+
 
 				<label>PHONE:</label><br>
 				<input type="number" name="phone"><br><br>

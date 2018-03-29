@@ -16,6 +16,9 @@
 // });
 
 // Route::get('/user', 'UserController@index');
+Route::get('/', 'UserController@loginpage');
+
+
 Route::get('register', 'UserController@create');
 Route::post('save', 'UserController@save')->name('store_user');
 
@@ -25,5 +28,4 @@ Route::put('user/update/{id}', 'UserController@update')->name('update');
 Route::get('resetpassword', 'UserController@passwordedit');
 Route::put('resetpasswordcomplete/{id}', 'UserController@update')->name('passwordreset');
 
-Route::get('/', 'UserController@loginpage');
 Route::post('auth-login', 'UserController@postlogin');
