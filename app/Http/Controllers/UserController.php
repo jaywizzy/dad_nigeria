@@ -39,7 +39,7 @@ class UserController extends Controller
         if($validatedRecords) {
             $user = $this->userModel->create($request);
             if ($user) {
-                return view('user.login')->with('success', 'user registered successfully');
+                return redirect('/');
             } else {
                 return view('user.register')->with('errors', 'failed to register user');
             }
