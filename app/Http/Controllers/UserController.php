@@ -39,7 +39,7 @@ class UserController extends Controller
         if($validatedRecords) {
             $user = $this->userModel->create($request);
             if ($user) {
-                return redirect()->route('/');                                                                                        ;
+                return redirect()->route('home');                                                                                        ;
             } else {
                 return view('user.register')->with('errors', 'failed to register user');
             }
@@ -95,7 +95,7 @@ class UserController extends Controller
 
             // $login = Sentinel::login($user);
             if (Sentinel::login($login)){
-                return redirect()->route('edit');
+                return redirect()->route('edit', $user->id);
             }else{
                 return ('oh nooo!');
             }
