@@ -17,6 +17,10 @@
 
 // Route::get('/user', 'UserController@index');
 Route::get('/', 'UserController@loginpage')->name('home');
+Route::get('users', function()
+{
+    return User::all();
+});
 
 
 Route::get('register', 'UserController@create');
