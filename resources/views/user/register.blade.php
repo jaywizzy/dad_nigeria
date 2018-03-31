@@ -28,12 +28,12 @@
 	{!! Form::open(['url' => 'save', 'method' => 'post']) !!}
 
 		<div class="form-group">
-			{{ Form::label('first_name', 'First_name') }}
+			{{ Form::label('first_name', 'First Name') }}
 			{{ Form::text('first_name', null, array('class' => 'form-control')) }}
 		</div>
 
 		<div class="form-group">
-			{{ Form::label('last_name', 'Last_name') }}
+			{{ Form::label('last_name', 'Last Name') }}
 			{{ Form::text('last_name', null, array('class' => 'form-control')) }}
 		</div>
 
@@ -56,7 +56,7 @@
 			{{ Form::text('position', null, array('class' => 'form-control')) }}
 		</div>
 		<div class="form-group">
-			{{ Form::label('postal_address', 'Postal_adress') }}
+			{{ Form::label('postal_address', 'Postal Adress') }}
 			{{ Form::text('postal_address', null, array('class' => 'form-control')) }}
 		</div>
 		<div class="form-group">
