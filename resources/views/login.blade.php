@@ -21,7 +21,7 @@
             </div>
             <div class="form-group">
                 <label for="">Password</label><br>
-                {!! Form::password('password', null, array('class' => 'form-control')) !!}
+                {!! Form::password('password', array('class' => 'form-control')) !!}
             </div>
             <br><br>
             <button type="submit" class="btn btn-primary"> Login</button>

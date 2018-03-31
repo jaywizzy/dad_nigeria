@@ -38,6 +38,7 @@ class UserController extends Controller
         ]);
         if($validatedRecords) {
             $user = $this->userModel->create($request);
+            // $createUser = Sentinel::register($user);
             if ($user) {
                 return redirect()->route('home');                                                                                        ;
             } else {
