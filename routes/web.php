@@ -16,7 +16,7 @@
 // });
 
 // Route::get('/user', 'UserController@index');
-Route::get('/', 'UserController@loginpage')->name('home');
+Route::get('/', 'UserController@loginpage')->name('login');
 Route::get('users', function()
 {
     return User::all();

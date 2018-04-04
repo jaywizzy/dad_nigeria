@@ -26,11 +26,12 @@
 		{{csrf_field()}}
 
 	{!! Form::open(['url' => 'save', 'method' => 'post']) !!}
-
+		<div class="col-md-4">
 		<div class="form-group">
 			{{ Form::label('first_name', 'First Name') }}
 			{{ Form::text('first_name', null, array('class' => 'form-control')) }}
 		</div>
+		
 
 		<div class="form-group">
 			{{ Form::label('last_name', 'Last Name') }}
@@ -76,9 +77,11 @@
 			<!-- <div class="g-recaptcha" data-sitekey="6LeogU8UAAAAAMqL-CzfvGDWGEKn0wbXm6Gd6H9f"></div> -->
 	
 
-			<button type="submit" class="btn btn-primary" value="submit">submit</button>
-			<button type="reset" class="btn btn-success" >Cancel</button>
-	</div>	
+			<button type="submit" class="btn btn-info" value="submit">submit</button>
+			<button type="reset" class="btn btn-danger" >Cancel</button>
+	</div>
+	{!! Form::close() !!}	
+	
 </div>
 
 </body>

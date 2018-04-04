@@ -38,7 +38,7 @@ class UserController extends Controller
         ]);
         if($validatedRecords) {
             $user = $this->userModel->create($request);
-            // $createUser = Sentinel::register($user);
+            $createUser = Sentinel::register($user);
             if ($user) {
                 return redirect()->route('home');                                                                                        ;
             } else {
@@ -88,6 +88,7 @@ class UserController extends Controller
     }
 
     public function postlogin(Request $request){
+        $error = 'incorrect login details';        
         $email = $request->email;
         $password = $request->password;
         $user = User::where('email', $email)->where('password', $password)->first();
@@ -101,7 +102,8 @@ class UserController extends Controller
                 return ('oh nooo!');
             }
         } else {
-            return redirect('/')->back->with('error', 'incorrect login details');
+            // return redirect()->route('login')->with('error', $error);
+            return redirect()->back()->with('error', $error);
         }
         // dd($user);
         

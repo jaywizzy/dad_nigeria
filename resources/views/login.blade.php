@@ -11,6 +11,7 @@
 <body>
     <div class="container">
     
+
         <div class="col-md-4">
         <br>
         {!! Form::open(['url' =>  'auth-login', 'method' => 'post']) !!}

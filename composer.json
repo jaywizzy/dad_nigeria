@@ -16,7 +16,8 @@
         "cartalyst/sentinel": "2.0.*",
         "laravelcollective/html": "^5.4.0",
         "mews/captcha": "^2.1",
-        "greggilbert/recaptcha": "dev-master"
+        "greggilbert/recaptcha": "dev-master",
+        "sendgrid/sendgrid": "~6.0"
     },
     "require-dev": {
         "filp/whoops": "^2.0",
