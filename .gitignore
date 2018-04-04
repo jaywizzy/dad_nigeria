@@ -12,3 +12,4 @@ npm-debug.log
 yarn-error.log
 .remote
 .env
+.sendgrid.env
