@@ -18,12 +18,13 @@
 		<!-- <div class="alert alert-danger"> -->
 			<ul>
 				@foreach($errors->all() as $error)
-					<li>{{ $error }}</li>
+					<li class="alert alert-danger">{{ $error }}</li>
 				@endforeach
 			</ul>
 		<!-- </div> -->
 	@endif
-		{{csrf_field()}}
+
+		{{ csrf_field() }}
 
 	{!! Form::open(['url' => 'save', 'method' => 'post']) !!}
 		<div class="col-md-4">

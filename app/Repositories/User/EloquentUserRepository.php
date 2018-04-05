@@ -9,28 +9,27 @@ use Sentinel;
 
 class EloquentUserRepository implements UserContract{
 
-    public function create($request){
-       
+	public function create($request){
+        
         $user = new User;
 
-	
-		// $user->username = $request->username;
-		$user->first_name = $request->first_name;
-		$user->last_name = $request->last_name;
-		$user->title = $request->title;
-		$user->organisation = $request->organisation;
-		$user->department = $request->department;
-		$user->position = $request->position;
-		$user->postal_address = $request->postal_address;
-		$user->phone = $request->phone;
-		$user->email = $request->email;
-		$user->comment = $request->comment;
-		$user->password = $request->password;
-		
+    
+        // $user->username = $request->username;
+        $user->first_name = $request->first_name;
+        $user->last_name = $request->last_name;
+        $user->title = $request->title;
+        $user->organisation = $request->organisation;
+        $user->department = $request->department;
+        $user->position = $request->position;
+        $user->postal_address = $request->postal_address;
+        $user->phone = $request->phone;
+        $user->email = $request->email;
+        $user->comment = $request->comment;
+        $user->password = $request->password;
+        
         // $save_user = Sentinel::register($user);
         $user->save();
-        return $user;
-        
+		return $user;
 	}
 	
 	public function edit($request, $id){

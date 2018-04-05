@@ -1,5 +1,6 @@
 <?php
 
+
 /**
  * Part of the Sentinel package.
  *

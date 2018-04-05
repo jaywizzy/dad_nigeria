@@ -9,6 +9,7 @@ use Cartalyst\Sentinel\Checkpoints\ThrottlingException;
 use Cartalyst\Sentinel\Checkpoints\NotActivatedException;
 use App\Repositories\User\UserContract;
 use Sentinel;
+// use Cartalyst\Sentinel\Native\Facades\Sentinel;
 use Auth;
 
 class UserController extends Controller
@@ -23,7 +24,7 @@ class UserController extends Controller
 
     public function create(){
         $error = null;
-        return view('user.register')->with('error', $error);
+        return view('auth.register')->with('error', $error);
     }
 
     public function save(Request $request){
@@ -38,11 +39,11 @@ class UserController extends Controller
         ]);
         if($validatedRecords) {
             $user = $this->userModel->create($request);
-            $createUser = Sentinel::register($user);
+            $createUser = Sentinel::register($request->all());
             if ($user) {
-                return redirect()->route('home');                                                                                        ;
+                return redirect()->route('login');                                                                                        ;
             } else {
-                return view('user.register')->with('errors', 'failed to register user');
+                return view('auth.register')->with('errors', 'failed to register user');
             }
         } else {
             return redirect()->back()->with('errors', 'Empty fields detected!');
@@ -84,7 +85,7 @@ class UserController extends Controller
     }
 
     public function loginpage(){
-        return view('login');
+        return view('auth.login');
     }
 
     public function postlogin(Request $request){
